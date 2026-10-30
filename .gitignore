@@ -1,0 +1,23 @@
+# API 키 (절대 커밋 금지)
+.env
+.env.*
+!.env.example
+
+# 데이터 (원본·중간 산출물은 용량·라이선스 때문에 올리지 않음, data.go.kr에서 다시 받기)
+data/raw/
+data/interim/
+data/external/
+data/processed/
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
