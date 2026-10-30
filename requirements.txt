@@ -2,4 +2,11 @@ pandas
 numpy
 requests
 pvlib
+holidays
 scikit-learn
+osmnx
+geopandas
+shapely
+pyproj
+opencv-python
+matplotlib
