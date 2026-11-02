@@ -10,3 +10,4 @@ shapely
 pyproj
 opencv-python
 matplotlib
+statsmodels
