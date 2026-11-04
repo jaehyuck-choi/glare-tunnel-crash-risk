@@ -11,3 +11,4 @@ pyproj
 opencv-python
 matplotlib
 statsmodels
+lightgbm
