@@ -1,0 +1,103 @@
+[
+ {
+  "dir": "01_exp55b",
+  "branch": "docs/model3-exp55b",
+  "title": "docs: 모델③ EXP-55b 천리안 정답 재실행 기록",
+  "files": [
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-55b_천리안정답_재실행.md"
+  ]
+ },
+ {
+  "dir": "02_exp55c",
+  "branch": "docs/model3-exp55c",
+  "title": "docs: 모델③ EXP-55c 사진분류 반영 기록",
+  "files": [
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-55c_사진분류반영.md"
+  ]
+ },
+ {
+  "dir": "03_exp55d",
+  "branch": "docs/model3-exp55d",
+  "title": "docs: 모델③ EXP-55d 학습에 터널 안 보이는 사진 추가 기록",
+  "files": [
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-55d_학습사진추가.md"
+  ]
+ },
+ {
+  "dir": "04_exp55e",
+  "branch": "docs/model3-exp55e",
+  "title": "docs: 모델③ EXP-55e 사진분류 전부 반영 기록",
+  "files": [
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-55e_사진분류전부반영.md"
+  ]
+ },
+ {
+  "dir": "05_exp88",
+  "branch": "docs/model3-exp88",
+  "title": "docs: 모델③ EXP-88 ②b 도로 사진 추가 기록 · 08 노트북 최신화",
+  "files": [
+   "notebooks/experiments/tunnel_photo_brightness/08_일반도로사진_학습추가.ipynb",
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-88_도로사진추가_2b.md"
+  ]
+ },
+ {
+  "dir": "06_explain08",
+  "branch": "docs/model3-explain08-rerun",
+  "title": "docs: 모델③ 08 설명력 재실행 기록 (지침 구간 155/80/70 m)",
+  "files": [
+   "notebooks/experiments/tunnel_adaptation/08_설명력_한계.ipynb",
+   "notebooks/experiments/tunnel_adaptation/실험정리/08_설명력_재실행_1105.md"
+  ]
+ },
+ {
+  "dir": "07_exp67",
+  "branch": "docs/model3-exp67-results",
+  "title": "docs: 모델③ EXP-67 처음 보는 카메라 시험 결과 최신화",
+  "files": [
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-67_처음보는카메라_71786학습.md"
+  ]
+ },
+ {
+  "dir": "08_common",
+  "branch": "docs/model3-common-rules-v3",
+  "title": "docs: 모델③ 공통 정답·채점 규칙 3판으로 최신화",
+  "files": [
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/00_공통_정답과_채점.md"
+  ]
+ },
+ {
+  "dir": "09_exp94",
+  "branch": "docs/model3-exp94",
+  "title": "docs: 모델③ EXP-94 구조 교차 비교 기록 · 노트북 10 최신화",
+  "files": [
+   "notebooks/experiments/tunnel_photo_brightness/10_등급2단계_로지스틱.ipynb",
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-94_구조교차_결과표.csv",
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-94_구조교차_짝차이.csv",
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-94_구조교차_학습OOF짝차이.csv",
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-94_구조교차비교.md"
+  ]
+ },
+ {
+  "dir": "10_final",
+  "branch": "docs/model3-final-model-detail",
+  "title": "docs: 모델③ 대표 모델 문서 상세판 (줄 긋기 표시 수정)",
+  "files": [
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-93_구조비교_결과표.csv",
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-93_구조비교_짝차이.csv",
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-93_짝차이_사진값어치포함.csv",
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/모델3_대표모델_확정_1106.md"
+  ]
+ },
+ {
+  "dir": "11_tilde_fix",
+  "branch": "docs/model3-tilde-fix",
+  "title": "docs: 모델③ 문서 물결표 줄 긋기 표시 수정",
+  "files": [
+   "notebooks/experiments/tunnel_adaptation/README.md",
+   "notebooks/experiments/tunnel_adaptation/pupil_ml1/README.md",
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-55_첫실험_Mapillary_규칙vsML.md",
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-56_등급경계_사고점검.md",
+   "notebooks/experiments/tunnel_photo_brightness/실험정리/EXP-93_구조비교_2단계.md"
+  ]
+ }
+]
