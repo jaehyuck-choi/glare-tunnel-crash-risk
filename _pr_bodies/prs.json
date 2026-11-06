@@ -1,0 +1,52 @@
+[
+ {
+  "number": 55,
+  "title": "feat: 모델③ 천리안 위성 정답 재산정과 사진·시각 정보 기여 분해",
+  "body_file": "_pr_bodies/55.md"
+ },
+ {
+  "number": 56,
+  "title": "feat: 모델③ 수동 사진분류 기반 입구 가시 표본 재검증",
+  "body_file": "_pr_bodies/56.md"
+ },
+ {
+  "number": 57,
+  "title": "feat: 모델③ 터널 비가시 사진 학습 확장과 장면 누수 점검",
+  "body_file": "_pr_bodies/57.md"
+ },
+ {
+  "number": 58,
+  "title": "feat: 모델③ 전체 사진분류 반영 교차검증과 등급 경계 민감도 분석",
+  "body_file": "_pr_bodies/58.md"
+ },
+ {
+  "number": 59,
+  "title": "feat: 모델③ 계절 보충 학습(②b)과 동일 여정 누수 정정",
+  "body_file": "_pr_bodies/59.md"
+ },
+ {
+  "number": 60,
+  "title": "feat: 모델③ 지침 구간(155/80/70 m) 재설정과 사고 설명력 재검증",
+  "body_file": "_pr_bodies/60.md"
+ },
+ {
+  "number": 61,
+  "title": "feat: 모델③ 이종 카메라 일반화 시험(71786→Mapillary)과 튜닝·판정 기준 검증",
+  "body_file": "_pr_bodies/61.md"
+ },
+ {
+  "number": 62,
+  "title": "docs: 모델③ 공통 정답·채점 규약 3판 (분할·튜닝 절차·이김 기준)",
+  "body_file": "_pr_bodies/62.md"
+ },
+ {
+  "number": 63,
+  "title": "feat: 모델③ 구조 교차 비교: ML 구조와 규칙 구조 맞바꿔 대조",
+  "body_file": "_pr_bodies/63.md"
+ },
+ {
+  "number": 64,
+  "title": "feat: 모델③ 대표 모델 확정: 추정 밝기 + 2단계 로지스틱과 최종 검증",
+  "body_file": "_pr_bodies/64.md"
+ }
+]
