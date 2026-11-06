@@ -45,7 +45,6 @@
   "branch": "docs/model3-explain08-rerun",
   "title": "docs: 모델③ 08 설명력 재실행 기록 (지침 구간 155/80/70 m)",
   "files": [
-   "notebooks/experiments/tunnel_adaptation/08_설명력_한계.ipynb",
    "notebooks/experiments/tunnel_adaptation/실험정리/08_설명력_재실행_1105.md"
   ]
  },

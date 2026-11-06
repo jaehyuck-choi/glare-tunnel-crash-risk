@@ -3,11 +3,10 @@ _Requested by **형** · [project thread](https://claude.ai/code/project/chan_01
 
 ## 요약
 
-순응 구간을 국토부 지침 기준으로 바꾼 뒤 08 설명력을 다시 계산한 기록입니다. 진입 1.29배(0.94\~1.78, p .105), 진출 신호 없음. `08_설명력_한계.ipynb` 최신본 포함.
+순응 구간을 국토부 지침 기준으로 바꾼 뒤 08 설명력을 다시 계산한 기록입니다. 진입 1.29배(0.94\~1.78, p .105), 진출 신호 없음.
 
 ## 바뀐 파일
 
-- `notebooks/experiments/tunnel_adaptation/08_설명력_한계.ipynb`
 - `notebooks/experiments/tunnel_adaptation/실험정리/08_설명력_재실행_1105.md`
 
 ## 확인한 것
