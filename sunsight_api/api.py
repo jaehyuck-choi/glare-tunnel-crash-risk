@@ -26,8 +26,7 @@ def screen_effect(g):
     """터널 입구 통과 순간 화면을 덮는 검은 막의 진하기(0~1)와 3초 회복 곡선. 0.5초 간격, 부드럽게(ease-out) 줄어듦."""
     d0 = DARK_START[g]; ts = np.arange(0, RECOVER_S + 1e-9, 0.5)
     curve = [{'t_s': float(t), 'dark_opacity': round(float(d0 * (1 - t / RECOVER_S) ** 2), 3)} for t in ts]
-    return {'start_dark_opacity': d0, 'recover_s': RECOVER_S, 'countdown': [3, 2, 1], 'curve': curve,
-            'label': '체감 연출 (측정값 아님)'}
+    return {'start_dark_opacity': d0, 'recover_s': RECOVER_S, 'countdown': [3, 2, 1], 'curve': curve}
 
 app = FastAPI(title='SunSight 모델 ③ 터널 입구 순응 위험도 API', version='1.0.0')
 app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_methods=['*'], allow_headers=['*'])
