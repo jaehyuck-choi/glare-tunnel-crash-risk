@@ -49,7 +49,7 @@ curl -X POST http://localhost:8000/predict/photo \
 
 (위 `pupil` 숫자는 형태를 보여주는 예시다.) 동공은 설명용이라 40세 · τ2 기본(30초)으로 고정했다. 등급은 나이와 상관없다. `speed_kmh`(기본 100)는 동공 칸의 경계부 시간에만 쓴다.
 
-응답에는 화면 가림 연출 값 `screen_effect`도 있다: `start_dark_opacity`(하 .30 · 중 .60 · 상 .85), `recover_s` 3, `curve`(0.5초 간격 검은 막 진하기). 체감 연출 값이며 측정값이 아니다.
+응답에는 화면 어둡기 값 `screen_effect`도 있다: `start_dark_opacity`(하 .30 · 중 .60 · 상 .85), `recover_s` 3, `curve`(0.5초 간격 검은 막 진하기). 화면에 쓰는 법은 `시뮬레이터_요청서_v3.md`를 따른다.
 
 ```text
 ```
@@ -58,19 +58,19 @@ curl -X POST http://localhost:8000/predict/photo \
 
 | 칸 | 뜻 | 화면에서 쓰는 법 |
 | --- | --- | --- |
-| `grade` | 입구 순응 위험도 하 · 중 · 상 (대표 모델 결과) | 배지 색: 하 초록 · 중 노랑 · 상 빨강 |
-| `grade_prob` | 모델이 각 등급을 얼마나 확신하는지 (합 1) | 막대·게이지. **사고 확률이 아니다** |
-| `est_outside_luminance_cd_m2` | 사진으로 추정한 바깥 밝기 L20 | 밝기 비교 막대의 "바깥" |
-| `tunnel_entrance_luminance_cd_m2` | 지침상 입구 조명 밝기 (280 × 조광 단계) | 밝기 비교 막대의 "터널 안" |
-| `est_luminance_ratio` | 바깥 ÷ 터널 안 (참고값) | "바깥이 약 N배 밝아요" |
-| `warn_distance_m` | 경고를 띄울 거리 (입구 앞 155m, 지침 정지시거) | 차가 입구 155m 전에 오면 알림 |
-| `boundary_zone_m` | 입구 경계부 길이 80m (100km/h에서 약 3초) | 동공 그림을 보여 줄 구간 |
-| `screen_effect` | 입구 통과 순간 검은 막 진하기와 3초 회복 곡선 (체감 연출) | 화면 가림 → 3·2·1 → 시야 확보 |
-| `pupil.open_fraction_1s` · `_2s` | 들어간 뒤 1초 · 2초에 동공이 필요한 만큼 열린 비율 (약 11% · 19%) | 설명 패널 한 줄 |
-| `pupil.pupil_outside_mm` → `pupil_boundary_end_mm` | 바깥에서의 동공 지름 → 경계부 끝(약 3초 뒤) 동공 지름 | 동공이 천천히 커지는 그림 |
-| `pupil.pupil_area_ratio_boundary_end` | 경계부 끝까지 동공이 더 받아들인 빛 (배) | "밝기는 N배 차이, 동공은 1.08배만 따라와요" |
-| `pupil.pupil_area_ratio_full` | 동공이 다 따라왔을 때 면적비 | 비교용 |
-| `pupil.residual_ratio_boundary_end` | 휘도비 ÷ 동공 면적비 (망막이 감당할 몫의 산술값) | "나머지는 망막이 버텨요". 시야 손실·사고 확률 아님 |
+| `grade` | 입구 순응 위험도 하 · 중 · 상 (대표 모델 결과) | 알림 색: 하 초록 · 중 노랑 · 상 빨강 |
+| `grade_prob` | 모델이 각 등급을 얼마나 확신하는지 (합 1) | 화면에 안 씀 (참고값). **사고 확률이 아니다** |
+| `est_outside_luminance_cd_m2` | 사진으로 추정한 바깥 밝기 L20 | 화면에 안 씀 (참고값) |
+| `tunnel_entrance_luminance_cd_m2` | 지침상 입구 조명 밝기 (280 × 조광 단계) | 화면에 안 씀 (참고값) |
+| `est_luminance_ratio` | 바깥 ÷ 터널 안 (참고값) | 화면에 안 씀 (참고값) |
+| `warn_distance_m` | 경고를 띄울 거리 (입구 앞 155m, 지침 정지시거) | 차가 입구 155m 전에 오면 알림 (거리 숫자는 화면에 안 띄움) |
+| `boundary_zone_m` | 입구 경계부 길이 80m (100km/h에서 약 3초) | 화면에 안 씀 (참고값) |
+| `screen_effect` | 입구 통과 순간 검은 막 진하기와 3초 회복 곡선 | 화면 어두워짐 → 3·2·1 → 최소 시야 확보 |
+| `pupil.open_fraction_1s` · `_2s` | 들어간 뒤 1초 · 2초에 동공이 필요한 만큼 열린 비율 (약 11% · 19%) | 화면에 안 씀 (참고값) |
+| `pupil.pupil_outside_mm` → `pupil_boundary_end_mm` | 바깥에서의 동공 지름 → 경계부 끝(약 3초 뒤) 동공 지름 | 화면에 안 씀 (참고값) |
+| `pupil.pupil_area_ratio_boundary_end` | 경계부 끝까지 동공이 더 받아들인 빛 (배) | 화면에 안 씀 (참고값) |
+| `pupil.pupil_area_ratio_full` | 동공이 다 따라왔을 때 면적비 | 화면에 안 씀 (참고값) |
+| `pupil.residual_ratio_boundary_end` | 휘도비 ÷ 동공 면적비 (망막이 감당할 몫의 산술값) | 화면에 안 씀 (참고값). 시야 손실·사고 확률 아님 |
 
 주의: `grade`는 13개 값을 함께 보고 바로 맞힌 등급이고, `est_luminance_ratio`는 추정 밝기만으로 계산한 참고값이다. 둘의 등급 기준(10배·15배)이 어긋날 수 있다 (시험 사진 입구 66장 중 62% 일치). 화면의 경고는 `grade`를 따른다.
 
