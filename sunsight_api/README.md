@@ -40,8 +40,16 @@ curl -X POST http://localhost:8000/predict/photo \
   "message": "터널 입구에서 눈이 어둠에 적응하기 조금 힘들어요. 속도를 줄여 주세요.",
   "warn_distance_m": 155, "boundary_zone_m": 80,
   "scope": "터널 입구(암순응)만. 출구는 범위 밖",
+  "pupil": {"age": 40, "tau2_assumption": "기본", "boundary_time_s": 2.88,
+            "pupil_outside_mm": 3.5, "pupil_inside_full_mm": 4.1, "pupil_boundary_end_mm": 3.66,
+            "pupil_area_ratio_full": 1.35, "pupil_area_ratio_boundary_end": 1.08, "residual_ratio_boundary_end": 9.6, "...": "..."},
   "photo_features": {"sky_mean": 0.61, "...": "..."}
 }
+```
+
+(위 `pupil` 숫자는 형태를 보여주는 예시다.) 동공 계산 입력은 선택이다: `age`(기본 40), `tau2`(동공 느린 열림 가정 `빠름` 10초 · `기본` 30초 · `느림` 60초), `speed_kmh`(기본 100). `/predict/features`는 줄마다 같은 이름으로 넣는다.
+
+```text
 ```
 
 ## 3. 응답 칸 뜻
@@ -55,6 +63,10 @@ curl -X POST http://localhost:8000/predict/photo \
 | `est_luminance_ratio` | 바깥 ÷ 터널 안 (참고값) | "바깥이 약 N배 밝아요" |
 | `warn_distance_m` | 경고를 띄울 거리 (입구 앞 155m, 지침 정지시거) | 차가 입구 155m 전에 오면 알림 |
 | `boundary_zone_m` | 입구 경계부 길이 80m (100km/h에서 약 3초) | 동공 그림을 보여 줄 구간 |
+| `pupil.pupil_outside_mm` → `pupil_boundary_end_mm` | 바깥에서의 동공 지름 → 경계부 끝(약 3초 뒤) 동공 지름 | 동공이 천천히 커지는 그림 |
+| `pupil.pupil_area_ratio_boundary_end` | 경계부 끝까지 동공이 더 받아들인 빛 (배) | "밝기는 N배 차이, 동공은 1.08배만 따라와요" |
+| `pupil.pupil_area_ratio_full` | 동공이 다 따라왔을 때 면적비 | 비교용 |
+| `pupil.residual_ratio_boundary_end` | 휘도비 ÷ 동공 면적비 (망막이 감당할 몫의 산술값) | "나머지는 망막이 버텨요". 시야 손실·사고 확률 아님 |
 
 주의: `grade`는 13개 값을 함께 보고 바로 맞힌 등급이고, `est_luminance_ratio`는 추정 밝기만으로 계산한 참고값이다. 둘의 등급 기준(10배·15배)이 어긋날 수 있다 (시험 사진 입구 66장 중 62% 일치). 화면의 경고는 `grade`를 따른다.
 
@@ -72,5 +84,7 @@ curl -X POST http://localhost:8000/predict/photo \
 | --- | --- |
 | `model3_core.py` | 사진 숫자 10개 · 해 높이 · 휘도비 · 등급 식 (07 · 10 노트북과 같음) |
 | `train_model.py` | 대표 모델 학습 → joblib 저장, 10 노트북과 대조 (`--test`, `--ref`) |
+| `pupil.py` · `동공시간_공식숫자.csv` | 동공 모델 (02 노트북과 같은 식, 01 PsPM 공식 숫자) |
 | `api.py` | FastAPI 서버 |
+| `00_API_확인.ipynb` | VS Code에서 Run All로 전부 확인 |
 | `verify_api.py` | API 결과가 10 노트북과 같은지 확인 |

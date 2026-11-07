@@ -1,5 +1,5 @@
 """API가 10 노트북 결과와 같은지 대조. 실행 위치: sunsight_api 폴더.
-python verify_api.py ../sunsight_video/data   (시험표_mapillary.csv · 등급2단계_사진별.csv · tunnel_photos/ 가 있는 폴더)"""
+python verify_api.py ../sunsight_video/data [../sunsight_pupil/결과/터널순응_위험도표.csv]   (시험표_mapillary.csv · 등급2단계_사진별.csv · tunnel_photos/ 가 있는 폴더)"""
 import sys, numpy as np, pandas as pd
 from sklearn.metrics import f1_score
 from model3_core import ratio_from_L20, grade, LAB
@@ -32,3 +32,21 @@ for _, r in te.iterrows():
     worst = max([worst] + [abs(o['photo_features'][k] - r[k]) for k in FEATURES if not pd.isna(r[k])])
     n += 1; ok += o['grade'] == ref.loc[ref.image_id == r['image_id'], col].iloc[0]
 print('② 사진 입력: 등급 일치', ok, '/', n, '| 피처 최대 차이', round(worst, 5))
+# ③ 동공 칸: 동공 02 결과표(밝기모델 = 주모델(직선회귀))와 비교. 두 번째 인자 = 터널순응_위험도표.csv (없으면 건너뜀)
+if len(sys.argv) > 2:
+    T = pd.read_csv(sys.argv[2], encoding='utf-8-sig', dtype={'image_id': str})
+    T = T[(T.밝기모델 == '주모델(직선회귀)') & (T.cls == '입구')]
+    COLS = {'pupil_outside_mm': '동공_전_mm', 'pupil_inside_full_mm': '동공_후_mm', 'pupil_boundary_end_mm': '동공_경계부끝_mm',
+            'pupil_area_ratio_full': '동공면적비_정상', 'pupil_area_ratio_boundary_end': '동공면적비_경계부끝',
+            'residual_ratio_boundary_end': '잔여조도비_가정_경계부끝'}
+    worst = {k: 0.0 for k in COLS}; n = 0
+    for age in sorted(T.나이.unique()):
+        for tau in T.τ2가정.unique():
+            out = c.post('/predict/features', json=[{**b, 'age': int(age), 'tau2': tau} for b in body]).json()
+            o = pd.DataFrame([{**x['pupil'], 'id': x['id']} for x in out]).set_index('id')
+            t = T[(T.나이 == age) & (T.τ2가정 == tau)].set_index('image_id').reindex(o.index)
+            for k, v in COLS.items(): worst[k] = max(worst[k], float((o[k] - t[v]).abs().max()))
+            n += len(o)
+    print('③ 동공 칸: 02 결과표와 비교', n, '줄 (입구 66장 × 나이', T.나이.nunique(), '× τ2', T.τ2가정.nunique(), ') | 최대 차이', {k: round(v, 4) for k, v in worst.items()})
+    one = pd.DataFrame([x['pupil'] for x in c.post('/predict/features', json=body).json()])
+    print('   40세 · τ2 기본 중앙값: 동공 면적비 정상', round(one.pupil_area_ratio_full.median(), 2), '/ 경계부 끝', round(one.pupil_area_ratio_boundary_end.median(), 2))
