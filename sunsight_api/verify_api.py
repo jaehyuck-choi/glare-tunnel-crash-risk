@@ -40,13 +40,13 @@ if len(sys.argv) > 2:
             'pupil_area_ratio_full': '동공면적비_정상', 'pupil_area_ratio_boundary_end': '동공면적비_경계부끝',
             'residual_ratio_boundary_end': '잔여조도비_가정_경계부끝'}
     worst = {k: 0.0 for k in COLS}; n = 0
-    for age in sorted(T.나이.unique()):
-        for tau in T.τ2가정.unique():
-            out = c.post('/predict/features', json=[{**b, 'age': int(age), 'tau2': tau} for b in body]).json()
+    for age in [40]:
+        for tau in ['기본']:
+            out = c.post('/predict/features', json=body).json()
             o = pd.DataFrame([{**x['pupil'], 'id': x['id']} for x in out]).set_index('id')
             t = T[(T.나이 == age) & (T.τ2가정 == tau)].set_index('image_id').reindex(o.index)
             for k, v in COLS.items(): worst[k] = max(worst[k], float((o[k] - t[v]).abs().max()))
             n += len(o)
-    print('③ 동공 칸: 02 결과표와 비교', n, '줄 (입구 66장 × 나이', T.나이.nunique(), '× τ2', T.τ2가정.nunique(), ') | 최대 차이', {k: round(v, 4) for k, v in worst.items()})
+    print('③ 동공 칸: 02 결과표와 비교', n, '줄 (입구 66장, 40세 · τ2 기본) | 최대 차이', {k: round(v, 4) for k, v in worst.items()})
     one = pd.DataFrame([x['pupil'] for x in c.post('/predict/features', json=body).json()])
     print('   40세 · τ2 기본 중앙값: 동공 면적비 정상', round(one.pupil_area_ratio_full.median(), 2), '/ 경계부 끝', round(one.pupil_area_ratio_boundary_end.median(), 2))

@@ -33,6 +33,7 @@ def pupil_entrance(L_out, L_in, age=40, tau2='기본', speed_kmh=100, zone_m=80)
     a_zone = max(D_pre, D_zone) ** 2 / min(D_pre, D_zone) ** 2
     return {'age': age, 'tau2_assumption': tau2, 'boundary_time_s': round(t, 2),
             'pupil_outside_mm': round(D_pre, 3), 'pupil_inside_full_mm': round(D_post, 3), 'pupil_boundary_end_mm': round(D_zone, 3),
+            'open_fraction_1s': round(float(frac_dark(1, TAU2[tau2])), 3), 'open_fraction_2s': round(float(frac_dark(2, TAU2[tau2])), 3),
             'open_fraction_boundary_end': round(f, 3),
             'pupil_area_ratio_full': round(a_full, 3), 'pupil_area_ratio_boundary_end': round(a_zone, 3),
             'residual_ratio_full': round(ratio / a_full, 2), 'residual_ratio_boundary_end': round(ratio / a_zone, 2),
