@@ -10,7 +10,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.metrics import f1_score, r2_score
 from model3_core import PLUS, MAIN_COLS, LAB, ratio_from_L20, grade
 
-C_MAIN = 0.01          # 11/6 형 확정값 (10 노트북에서 학습 OOF F1로 고른 값)
+C_MAIN = 0.01          # 11/6 확정값 (10 노트북에서 학습 OOF F1로 고른 값)
 ridge = lambda: make_pipeline(SimpleImputer(strategy='median'), StandardScaler(), Ridge(alpha=10))
 logit = lambda: make_pipeline(SimpleImputer(strategy='median'), StandardScaler(),
                               LogisticRegression(C=C_MAIN, class_weight='balanced', max_iter=2000))
