@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <rect width="960" height="300" rx="14" fill="#ffffff"/>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a8f98"/></marker></defs>
+  <text x="24" y="34" font-size="15" font-weight="700" fill="#6b7280">정답 만들기 (사진 밖에서)</text>
+  <g font-size="14" fill="#111827" text-anchor="middle">
+    <rect x="24" y="48" width="160" height="62" rx="10" fill="#fff4e0" stroke="#f0b35a"/>
+    <text x="104" y="74" font-weight="700">위성 일사량</text><text x="104" y="96" font-size="12" fill="#6b7280">촬영 시각 · 위경도</text>
+    <rect x="214" y="48" width="160" height="62" rx="10" fill="#fff4e0" stroke="#f0b35a"/>
+    <text x="294" y="74" font-weight="700">바깥 밝기</text><text x="294" y="96" font-size="12" fill="#6b7280">일사량 × 약 1,671</text>
+    <rect x="404" y="48" width="160" height="62" rx="10" fill="#fff4e0" stroke="#f0b35a"/>
+    <text x="484" y="74" font-weight="700">÷ 입구 조명</text><text x="484" y="96" font-size="12" fill="#6b7280">280 × 조광 (국토부 지침)</text>
+    <rect x="594" y="48" width="160" height="62" rx="10" fill="#fff4e0" stroke="#f0b35a"/>
+    <text x="674" y="74" font-weight="700">휘도비</text><text x="674" y="96" font-size="12" fill="#6b7280">10배 · 15배 경계</text>
+    <rect x="784" y="48" width="152" height="62" rx="10" fill="#fde2e2" stroke="#e06666"/>
+    <text x="860" y="74" font-weight="700">정답 등급</text><text x="860" y="96" font-size="12" fill="#6b7280">하 · 중 · 상</text>
+  </g>
+  <g stroke="#8a8f98" stroke-width="2" marker-end="url(#a)"><line x1="184" y1="79" x2="210" y2="79"/><line x1="374" y1="79" x2="400" y2="79"/><line x1="564" y1="79" x2="590" y2="79"/><line x1="754" y1="79" x2="780" y2="79"/></g>
+  <text x="24" y="160" font-size="15" font-weight="700" fill="#6b7280">대표 모델 (사진 한 장으로)</text>
+  <g font-size="14" fill="#111827" text-anchor="middle">
+    <rect x="24" y="174" width="190" height="72" rx="10" fill="#e6f0ff" stroke="#5b8def"/>
+    <text x="119" y="202" font-weight="700">입구 앞 사진</text><text x="119" y="224" font-size="12" fill="#6b7280">사진 숫자 10 + 해 높이 + 구름</text>
+    <rect x="254" y="174" width="190" height="72" rx="10" fill="#e6f0ff" stroke="#5b8def"/>
+    <text x="349" y="202" font-weight="700">① 직선 회귀</text><text x="349" y="224" font-size="12" fill="#6b7280">바깥 밝기 추정 (R² .77)</text>
+    <rect x="484" y="174" width="210" height="72" rx="10" fill="#e6f0ff" stroke="#5b8def"/>
+    <text x="589" y="202" font-weight="700">② 2단계 로지스틱</text><text x="589" y="224" font-size="12" fill="#6b7280">하인가? → 중인가, 상인가?</text>
+    <rect x="734" y="174" width="202" height="72" rx="10" fill="#e3f5e8" stroke="#4caf6e"/>
+    <text x="835" y="202" font-weight="700">순응 위험도 알림</text><text x="835" y="224" font-size="12" fill="#6b7280">+ 동공이 메우는 몫 설명</text>
+  </g>
+  <g stroke="#8a8f98" stroke-width="2" marker-end="url(#a)"><line x1="214" y1="210" x2="250" y2="210"/><line x1="444" y1="210" x2="480" y2="210"/><line x1="694" y1="210" x2="730" y2="210"/></g>
+  <path d="M860,110 C860,140 589,140 589,170" fill="none" stroke="#e06666" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a)"/>
+  <text x="660" y="163" font-size="12" fill="#c0504d">학습 · 채점에만 쓰는 정답</text>
+  <text x="24" y="284" font-size="12" fill="#6b7280">학습: AI Hub 71786 3,624장 (카메라 1기종, 8~9월)  ·  시험: 처음 보는 카메라 Mapillary 입구 66장  ·  출구는 범위 밖</text>
+</svg>

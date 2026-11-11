@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<rect width="960" height="430" rx="14" fill="#ffffff"/>
+<text x="24" y="36" font-size="17" font-weight="700" fill="#111827">처음 보는 카메라 · 입구 66장 · 3등급 Macro F1</text>
+<text x="286" y="80" font-size="14" text-anchor="end" fill="#111827" >손 규칙</text>
+<rect x="300" y="64" width="135" height="24" rx="4" fill="#b8bec8"/>
+<text x="443" y="81" font-size="14" fill="#111827" >.241</text>
+<text x="286" y="120" font-size="14" text-anchor="end" fill="#111827" >경계값 학습 규칙</text>
+<rect x="300" y="104" width="45" height="24" rx="4" fill="#b8bec8"/>
+<text x="353" y="121" font-size="14" fill="#111827" >.080</text>
+<text x="286" y="160" font-size="14" text-anchor="end" fill="#111827" >숫자 하나 직선 규칙</text>
+<rect x="300" y="144" width="45" height="24" rx="4" fill="#b8bec8"/>
+<text x="353" y="161" font-size="14" fill="#111827" >.080</text>
+<text x="286" y="200" font-size="14" text-anchor="end" fill="#111827" >물리 공식 규칙</text>
+<rect x="300" y="184" width="239" height="24" rx="4" fill="#b8bec8"/>
+<text x="547" y="201" font-size="14" fill="#111827" >.427</text>
+<text x="286" y="240" font-size="14" text-anchor="end" fill="#111827" >해 높이 2단계 규칙</text>
+<rect x="300" y="224" width="442" height="24" rx="4" fill="#b8bec8"/>
+<text x="750" y="241" font-size="14" fill="#111827" >.789</text>
+<text x="286" y="280" font-size="14" text-anchor="end" fill="#111827" >부스팅 (밝기 → 등급)</text>
+<rect x="300" y="264" width="295" height="24" rx="4" fill="#8fb3f0"/>
+<text x="603" y="281" font-size="14" fill="#111827" >.526</text>
+<text x="286" y="320" font-size="14" text-anchor="end" fill="#111827" >2단계 로지스틱</text>
+<rect x="300" y="304" width="461" height="24" rx="4" fill="#8fb3f0"/>
+<text x="769" y="321" font-size="14" fill="#111827" >.824</text>
+<text x="286" y="360" font-size="14" text-anchor="end" fill="#111827" font-weight="700">대표 모델 (추정 밝기 + 2단계)</text>
+<rect x="300" y="344" width="473" height="24" rx="4" fill="#2f6fe0"/>
+<text x="781" y="361" font-size="14" fill="#111827" font-weight="700">.844</text>
+<rect x="300" y="392" width="14" height="14" fill="#b8bec8"/><text x="320" y="404" font-size="13" fill="#6b7280">규칙</text>
+<rect x="380" y="392" width="14" height="14" fill="#8fb3f0"/><text x="400" y="404" font-size="13" fill="#6b7280">ML</text>
+<text x="450" y="404" font-size="13" fill="#6b7280">해 높이 규칙과의 차이 +.057은 통계적으로 "비슷"</text>
+</svg>
