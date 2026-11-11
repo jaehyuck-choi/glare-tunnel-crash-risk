@@ -1,5 +1,8 @@
 # 터널에 들어서는 3초, 눈은 얼마나 따라갈까
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikitlearn&logoColor=white) ![LightGBM](https://img.shields.io/badge/LightGBM-2E7D32?style=flat) ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![처음 보는 카메라 F1](https://img.shields.io/badge/%EC%B2%98%EC%9D%8C%20%EB%B3%B4%EB%8A%94%20%EC%B9%B4%EB%A9%94%EB%9D%BC%20F1-.844-2f6fe0?style=flat) ![기간](https://img.shields.io/badge/2026.10.29~11.10-%ED%8C%80%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%AA%A8%EB%8D%B8%E2%91%A2-6b7280?style=flat)
+
 > iM뱅크 데이터 분석 교육 머신러닝 프로젝트 · 3조 "눈치" · 2026-10-29 ~ 11-10
 > **팀 모델 ③ "터널 암순응 위험도" 담당 · 데이터 수집부터 모델 · 동공 모델 · API까지 혼자 맡음**
 
