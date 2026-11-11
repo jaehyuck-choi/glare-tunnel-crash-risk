@@ -17,16 +17,16 @@ MSG = {'하': '터널 입구 밝기 차이가 크지 않아요.',
        '중': '터널 입구에서 눈이 어둠에 적응하기 조금 힘들어요. 속도를 줄여 주세요.',
        '상': '터널 입구에서 눈이 어둠에 적응하기 매우 힘들어요. 미리 속도를 줄여 주세요.'}
 EN = {'하': 'low', '중': 'mid', '상': 'high'}
-# 화면 어둡기 (11/7 결정): 시작 어둡기 = 등급, 회복 = 3초 고정
-DARK_START = {'하': 0.30, '중': 0.60, '상': 0.85}
-RECOVER_S = 3.0
+# 화면 어둡기 (11/9 요청서 v4): 시작 어둡기 = 등급, 회복 = 2초 고정
+DARK_START = {'하': 0.35, '중': 0.65, '상': 0.95}
+RECOVER_S = 2.0
 
 
 def screen_effect(g):
-    """터널 입구 통과 순간 화면을 덮는 검은 막의 진하기(0~1)와 3초 회복 곡선. 0.5초 간격, 부드럽게(ease-out) 줄어듦."""
+    """터널 입구 통과 순간 화면을 덮는 검은 막의 진하기(0~1)와 2초 회복 곡선. 0.5초 간격, 부드럽게(ease-out) 줄어듦."""
     d0 = DARK_START[g]; ts = np.arange(0, RECOVER_S + 1e-9, 0.5)
     curve = [{'t_s': float(t), 'dark_opacity': round(float(d0 * (1 - t / RECOVER_S) ** 2), 3)} for t in ts]
-    return {'start_dark_opacity': d0, 'recover_s': RECOVER_S, 'countdown': [3, 2, 1], 'curve': curve}
+    return {'start_dark_opacity': d0, 'recover_s': RECOVER_S, 'countdown': list(range(int(RECOVER_S), 0, -1)), 'curve': curve}
 
 app = FastAPI(title='SunSight 모델 ③ 터널 입구 순응 위험도 API', version='1.0.0')
 app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_methods=['*'], allow_headers=['*'])

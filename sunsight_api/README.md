@@ -49,7 +49,7 @@ curl -X POST http://localhost:8000/predict/photo \
 
 (위 `pupil` 숫자는 형태를 보여주는 예시다.) 동공은 설명용이라 40세 · τ2 기본(30초)으로 고정했다. 등급은 나이와 상관없다. `speed_kmh`(기본 100)는 동공 칸의 경계부 시간에만 쓴다.
 
-응답에는 화면 어둡기 값 `screen_effect`도 있다: `start_dark_opacity`(하 .30 · 중 .60 · 상 .85), `recover_s` 3, `curve`(0.5초 간격 검은 막 진하기). 화면에 쓰는 법은 `시뮬레이터_요청서_v3.md`를 따른다.
+응답에는 화면 어둡기 값 `screen_effect`도 있다: `start_dark_opacity`(하 .35 · 중 .65 · 상 .95), `recover_s` 2, `curve`(0.5초 간격 검은 막 진하기). 화면에 쓰는 법은 시뮬레이터 요청서 v4를 따른다 (`시뮬레이터_요청서_v3.md`는 이전 판: 3초 회복 · .30/.60/.85).
 
 ```text
 ```
@@ -65,7 +65,7 @@ curl -X POST http://localhost:8000/predict/photo \
 | `est_luminance_ratio` | 바깥 ÷ 터널 안 (참고값) | 화면에 안 씀 (참고값) |
 | `warn_distance_m` | 경고를 띄울 거리 (입구 앞 155m, 지침 정지시거) | 차가 입구 155m 전에 오면 알림 (거리 숫자는 화면에 안 띄움) |
 | `boundary_zone_m` | 입구 경계부 길이 80m (100km/h에서 약 3초) | 화면에 안 씀 (참고값) |
-| `screen_effect` | 입구 통과 순간 검은 막 진하기와 3초 회복 곡선 | 화면 어두워짐 → 3·2·1 → 최소 시야 확보 |
+| `screen_effect` | 입구 통과 순간 검은 막 진하기와 2초 회복 곡선 | 화면 확 어두워짐 → 2·1 → 시야 확보 |
 | `pupil.open_fraction_1s` · `_2s` | 들어간 뒤 1초 · 2초에 동공이 필요한 만큼 열린 비율 (약 11% · 19%) | 화면에 안 씀 (참고값) |
 | `pupil.pupil_outside_mm` → `pupil_boundary_end_mm` | 바깥에서의 동공 지름 → 경계부 끝(약 3초 뒤) 동공 지름 | 화면에 안 씀 (참고값) |
 | `pupil.pupil_area_ratio_boundary_end` | 경계부 끝까지 동공이 더 받아들인 빛 (배) | 화면에 안 씀 (참고값) |
