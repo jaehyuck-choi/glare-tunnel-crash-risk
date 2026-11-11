@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<rect width="960" height="300" rx="14" fill="#ffffff"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a8f98"/></marker></defs>
+<text x="24" y="36" font-size="17" font-weight="700" fill="#111827">입구 휘도비 약 12배 중, 동공이 메우는 몫은 작다 (입구 66장 · 20세)</text>
+<text x="186" y="94" font-size="13" fill="#111827" text-anchor="end" font-weight="700">들어가기 전</text>
+<rect x="200" y="70" width="700" height="34" rx="4" fill="#e06666" opacity=".85"/>
+<text x="210" y="93" font-size="13" fill="#ffffff" text-anchor="start" font-weight="700">망막 몫 약 12.1배</text>
+<text x="186" y="156" font-size="13" fill="#111827" text-anchor="end" font-weight="700">약 3초 뒤 (경계부 끝)</text>
+<rect x="200" y="132" width="25" height="34" rx="4" fill="#4caf6e"/>
+<rect x="225" y="132" width="675" height="34" rx="4" fill="#e06666" opacity=".85"/>
+<text x="234" y="155" font-size="13" fill="#ffffff" text-anchor="start" font-weight="700">망막 몫 약 11.1배</text>
+<text x="224" y="126" font-size="12" fill="#2e7d4f" text-anchor="start" font-weight="700">동공 1.09배</text>
+<text x="186" y="218" font-size="13" fill="#111827" text-anchor="end" font-weight="700">동공이 끝까지 열리면</text>
+<rect x="200" y="194" width="102" height="34" rx="4" fill="#4caf6e"/>
+<rect x="302" y="194" width="598" height="34" rx="4" fill="#e06666" opacity=".85"/>
+<text x="311" y="217" font-size="13" fill="#ffffff" text-anchor="start" font-weight="700">망막 몫 약 8.4배</text>
+<text x="301" y="188" font-size="12" fill="#2e7d4f" text-anchor="start" font-weight="700">동공 1.44배</text>
+<text x="200" y="256" font-size="12" fill="#6b7280" text-anchor="start">막대 전체 = 휘도비 약 12배 (곱셈이라 로그 길이로 그림) · 초록 = 동공이 메운 몫 · 빨강 = 망막이 떠안는 몫</text>
+<text x="200" y="278" font-size="12" fill="#6b7280" text-anchor="start">동공: PsPM 22명 시간 곡선 + Watson &amp; Yellott(2012) 크기 공식 · 등급은 휘도비로, 동공은 설명용</text>
+</svg>
