@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="380" viewBox="0 0 960 380" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+<rect width="960" height="380" rx="14" fill="#ffffff"/>
+<text x="24" y="36" font-size="17" font-weight="700" fill="#111827">성능을 올린 과정 · 처음 보는 카메라 입구 66장 Macro F1</text>
+<line x1="70" y1="300" x2="930" y2="300" stroke="#eef0f3"/><text x="64" y="304" font-size="11" text-anchor="end" fill="#9ca3af">0.00</text>
+<line x1="70" y1="242" x2="930" y2="242" stroke="#eef0f3"/><text x="64" y="246" font-size="11" text-anchor="end" fill="#9ca3af">0.25</text>
+<line x1="70" y1="185" x2="930" y2="185" stroke="#eef0f3"/><text x="64" y="189" font-size="11" text-anchor="end" fill="#9ca3af">0.50</text>
+<line x1="70" y1="128" x2="930" y2="128" stroke="#eef0f3"/><text x="64" y="132" font-size="11" text-anchor="end" fill="#9ca3af">0.75</text>
+<line x1="70" y1="70" x2="930" y2="70" stroke="#eef0f3"/><text x="64" y="74" font-size="11" text-anchor="end" fill="#9ca3af">1.00</text>
+<line x1="70" y1="119" x2="930" y2="119" stroke="#e06666" stroke-dasharray="6 4"/><text x="80" y="113" font-size="12" fill="#c0504d">가장 강한 규칙 (해 높이 2단계) .789</text>
+<rect x="80" y="202" width="120" height="98" rx="5" fill="#b8bec8"/>
+<text x="140" y="194" font-size="15" text-anchor="middle" font-weight="700" fill="#111827">.427</text>
+<text x="140" y="322" font-size="13" text-anchor="middle" font-weight="700" fill="#111827">규칙 출발점</text>
+<text x="140" y="340" font-size="12" text-anchor="middle" fill="#6b7280">물리 공식 규칙</text>
+<rect x="260" y="179" width="120" height="121" rx="5" fill="#8fb3f0"/>
+<text x="320" y="171" font-size="15" text-anchor="middle" font-weight="700" fill="#111827">.526</text>
+<text x="320" y="322" font-size="13" text-anchor="middle" font-weight="700" fill="#111827">1. 첫 ML</text>
+<text x="320" y="340" font-size="12" text-anchor="middle" fill="#6b7280">부스팅: 밝기 → 공식</text>
+<rect x="440" y="187" width="120" height="113" rx="5" fill="#8fb3f0"/>
+<text x="500" y="179" font-size="15" text-anchor="middle" font-weight="700" fill="#111827">.490</text>
+<text x="500" y="322" font-size="13" text-anchor="middle" font-weight="700" fill="#111827">2. 다시 튜닝</text>
+<text x="500" y="340" font-size="12" text-anchor="middle" fill="#6b7280">같은 부스팅, F1로</text>
+<rect x="620" y="110" width="120" height="190" rx="5" fill="#8fb3f0"/>
+<text x="680" y="102" font-size="15" text-anchor="middle" font-weight="700" fill="#111827">.824</text>
+<text x="680" y="322" font-size="13" text-anchor="middle" font-weight="700" fill="#111827">3. 구조 바꾸기</text>
+<text x="680" y="340" font-size="12" text-anchor="middle" fill="#6b7280">2단계 로지스틱</text>
+<rect x="800" y="106" width="120" height="194" rx="5" fill="#2f6fe0"/>
+<text x="860" y="98" font-size="15" text-anchor="middle" font-weight="700" fill="#111827">.844</text>
+<text x="860" y="322" font-size="13" text-anchor="middle" font-weight="700" fill="#111827">4. 밝기 고리</text>
+<text x="860" y="340" font-size="12" text-anchor="middle" fill="#6b7280">+ 추정 바깥 밝기</text>
+<text x="24" y="364" font-size="12" fill="#6b7280">모두 같은 학습(AI Hub 71786, 8~9월) · 같은 시험(Mapillary 입구 66장) · 설정은 학습 쪽에서만 골랐음</text>
+</svg>
